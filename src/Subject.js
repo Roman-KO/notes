@@ -8,9 +8,14 @@ export default class Subject extends Component {
 	// Event Handlers
 	render() {
 		return(
-			<p>
-				Subject Components
-			</p>
+			<div>
+				{this.props.subject}
+				<ul>
+					<li>
+						<a href=""></a>
+					</li>
+				</ul>
+			</div>
 		)
 	}
 }

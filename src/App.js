@@ -66,7 +66,10 @@ class App extends Component {
         return (
             <div>
                 <h1>A Title</h1>
-                <Subject />
+                <Subject subject={this.state.resources[0].subject}/>
+                <Subject subject={this.state.resources[1].subject}/>
+                <Subject subject={this.state.resources[2].subject}/>
+                <Subject subject={this.state.resources[3].subject}/>
             </div>
         );
     }
