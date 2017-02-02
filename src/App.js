@@ -7,7 +7,10 @@ class App extends Component {
     constructor() {
         super();
         
-        this.state = {};
+        this.state = {
+            resource: "https://facebook.github.io/react/docs/thinking-in-react.html",
+            title: "Thinking in React",
+        };
     }
     
     // Event handlers (not every component will need this, choose wisely)
@@ -18,7 +21,7 @@ class App extends Component {
             <div>
                 A Title
                 <br/>
-                <a href="http://www.google.com" target="_blank">A Link</a>
+                <a href="{this.state.resource}" target="_blank">{this.state.title}</a>
             </div>
         );
     }
