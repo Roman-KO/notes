@@ -2,7 +2,21 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  line-height: 28px;
   font-family: hack, monospace;
   background: #101319;
   color: #606369;
 }
+a {
+    color: #606369;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255,.2);
+    transition: ease border .5, ease color .5;
+}
+a:hover {
+    color: white;
+    border-color: white;
+    transition: ease border .5, ease color .5;
+}
+
+
