@@ -66,9 +66,9 @@ class App extends Component {
             <div>
                 <h1>A Title</h1>
                 <ol>
-                {this.state.resources.map((resource) => {
-                    return <li><a href={resource.url} target="_blank">{resource.title}</a></li>
-                })}
+                    {this.state.resources.map((resource) => {
+                        return <li><a href={resource.url} target="_blank">{resource.title}</a></li>
+                    })}
                 </ol>
             </div>
         );
