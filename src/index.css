@@ -11,12 +11,12 @@ a {
     color: #606369;
     text-decoration: none;
     border-bottom: 2px solid rgba(255,255,255,.2);
-    transition: ease border .5, ease color .5;
+    transition: ease border 2s, ease color 2s;
 }
 a:hover {
     color: white;
     border-color: white;
-    transition: ease border .5, ease color .5;
+    transition: ease border .2s, ease color .2s;
 }
 
 

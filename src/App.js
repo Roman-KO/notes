@@ -6,8 +6,9 @@ class App extends Component {
     constructor() {
         super();
         
-        this.state = {
-            resources: [
+        this.state = { resources: [
+
+                    {subject: "Functional Programming Basics", resources: [
                         {title: "Higher-order functions - Part 1 of Functional Programming in JavaScript",
                             url: "https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84"},
                         {title: "var, let and const - What, why and how - ES6 JavaScript Features",
@@ -17,8 +18,10 @@ class App extends Component {
                         {title: "var, let and const - What, why and how - ES6 JavaScript Features",
                             url: "https://www.youtube.com/watch?v=sjyJBL5fkp8"},
                         {title: "Arrow functions in JavaScript - What, Why and How - FunFunFunction #32",
-                            url: "https://www.youtube.com/watch?v=6sQDTgOqh-I"},
+                            url: "https://www.youtube.com/watch?v=6sQDTgOqh-I"}
+                        ]},
 
+                    {subject: "ES6 Essentials", resources: [
                         {title: "Essential ES6 / ES2015 JavaScript",
                             url: "https://www.youtube.com/watch?v=CozSF5abcTA"},
                         {title: "JavaScript ES6+: var, let, or const?",
@@ -26,8 +29,10 @@ class App extends Component {
                         {title: "Interactive ES5 to ES6 conversion guide:",
                             url: "http://stack.formidable.com/es6-interactive-guide/#/"},
                         {title: "Javascript ES6 Cheatsheet - the best of JS ES6",
-                            url: "https://www.youtube.com/watch?v=AfWYO8t7ed4"},
+                            url: "https://www.youtube.com/watch?v=AfWYO8t7ed4"}
+                        ]},
                             
+                    {subject: "Intro to React", resources: [
                         {title: "Javascript ES6 Cheatsheet #2 - the best of JS ES6",
                             url: "https://www.youtube.com/watch?v=LmL0Gh193M0"},
                         {title: "ECMAScript 6 / ES6 New Features - Tutorial 1 - Let",
@@ -35,19 +40,22 @@ class App extends Component {
                         {title: "Learn ES6 (ECMAScript 2015)",
                             url: "https://egghead.io/courses/learn-es6-ecmascript-2015"},
                         {title: "ES6 JavaScript - The Basics",
-                            url: "https://www.youtube.com/watch?v=IEf1KAcK6A8"},
+                            url: "https://www.youtube.com/watch?v=IEf1KAcK6A8"}
+                        ]},
                             
+                    {subject: "Beginning React", resources: [
                         {title: "Thinking in React",
                             url: "https://facebook.github.io/react/docs/thinking-in-react.html"},
                         {title: "ReactJS Basics",
                             url: "https://www.youtube.com/watch?v=JPT3bFIwJYA&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS"},
                         {title: "REACT JS TUTORIAL #2 - Reactjs Components & Rendering",
-                            url: "https://youtu.be/fd2Cayhez58"}, 
+                            url: "https://youtu.be/fd2Cayhez58"},
                         {title: "ReactJS Basics - #1 What is React?",
                             url: "https://www.youtube.com/watch?v=JPT3bFIwJYA"},
                         {title: "REACT JS TUTORIAL #2 - Reactjs Components & Rendering",
-                            url: "https://www.youtube.com/watch?v=fd2Cayhez58&feature=youtu.be"},
-                        ]
+                            url: "https://www.youtube.com/watch?v=fd2Cayhez58&feature=youtu.be"}
+                        ]}
+                    ]
         };
     }
     
@@ -56,7 +64,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                A Title
+                <h1>A Title</h1>
                 <ol>
                 {this.state.resources.map((resource) => {
                     return <li><a href={resource.url} target="_blank">{resource.title}</a></li>
