@@ -9,18 +9,17 @@ export default class Subject extends Component {
 	render() {
 		return(
 			<div>
-				{this.props.items.subject}
+				<h2>{this.props.items.subject}</h2>
 				<ul>
 					{this.props.items.resources.map(
 						(resource) => {
 							return(
 								<li>
-									<a href="{resource.url}">{resource.title} s</a>
+									<a href="{resource.url}">{resource.title}</a>
 								</li>
 							)
 						}
-					)
-				}
+					)}
 				</ul>
 			</div>
 		)

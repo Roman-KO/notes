@@ -65,10 +65,13 @@ class App extends Component {
         return (
             <div>
                 <h1>A Title</h1>
-                <Subject items={this.state.resources[0]}/>
-                <Subject items={this.state.resources[1]}/>
-                <Subject items={this.state.resources[2]}/>
-                <Subject items={this.state.resources[3]}/>
+                {this.state.resources.map(
+                    (resource) => {
+                        return(
+                            <Subject items={resource}/>
+                        )
+                    }
+                )}
             </div>
         );
     }
