@@ -15,7 +15,7 @@ export default class Subject extends Component {
 						(resource) => {
 							return(
 								<li>
-									<a href="{resource.url}">{resource.title}</a>
+									<a href="{resource.url}" target="_blank">{resource.title}</a>
 								</li>
 							)
 						}
