@@ -19,5 +19,13 @@ a:hover {
     box-shadow: 0 2px 0 0 white;
     transition: ease box-shadow .2s, ease color .2s;
 }
-
+.fun {
+    color: red;
+}
+.unfun {
+    color: blue;
+}
+.unfuntoo {
+    color: green;
+}
 
