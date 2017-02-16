@@ -9,10 +9,8 @@
 1. Modify App.js + Subject.js to accommodate new state structure
 1. Display list of resource titles and links per component
 1. Programmatically generate child components in App.js
-1.
-
-Clicking on header should change the child element (font, color)
-
+1. Clicking on header of component changes the child element (font, color, etc)
+1. Render a controlled input field that can be typed into it.
 
 <!-- 1. Store Links in a ... flat.json (and store in github?) -->
 

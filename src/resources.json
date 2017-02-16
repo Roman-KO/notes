@@ -1,0 +1,68 @@
+[
+	{"subject": "Functional Programming Basics", "resources": [
+		{"title": "Higher-order functions - Part 1 of Functional Programming in JavaScript",
+			"url": "https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84"},
+		{"title": "var, let and const - What, why and how - ES6 JavaScript Features",
+			"url": "https://www.youtube.com/watch?v=sjyJBL5fkp8"},
+		{"title": "Arrow functions in JavaScript - What, Why and How - FunFunFunction #32",
+			"url": "https://www.youtube.com/watch?v=6sQDTgOqh-I"},
+		{"title": "var, let and const - What, why and how - ES6 JavaScript Features",
+			"url": "https://www.youtube.com/watch?v=sjyJBL5fkp8"},
+		{"title": "Arrow functions in JavaScript - What, Why and How - FunFunFunction #32",
+			"url": "https://www.youtube.com/watch?v=6sQDTgOqh-I"}
+	]},
+
+	{"subject": "ES6 Essentials", "resources": [
+		{"title": "Essential ES6 / ES2015 JavaScript",
+			"url": "https://www.youtube.com/watch?v=CozSF5abcTA"},
+		{"title": "JavaScript ES6+: var, let, or const?",
+			"url": "https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.ak68hz8j5"},
+		{"title": "Interactive ES5 to ES6 conversion guide:",
+			"url": "http://stack.formidable.com/es6-interactive-guide/#/"},
+		{"title": "Javascript ES6 Cheatsheet - the best of JS ES6",
+			"url": "https://www.youtube.com/watch?v=AfWYO8t7ed4"}
+	]},
+			
+	{"subject": "Intro to React", "resources": [
+		{"title": "Javascript ES6 Cheatsheet #2 - the best of JS ES6",
+			"url": "https://www.youtube.com/watch?v=LmL0Gh193M0"},
+		{"title": "ECMAScript 6 / ES6 New Features - Tutorial 1 - Let",
+			"url": "https://www.youtube.com/watch?v=ZJZfIw3P8No&list=PL6gx4Cwl9DGBhgcpA8eTYYWg7im72LgLt"},
+		{"title": "Learn ES6 (ECMAScript 2015)",
+			"url": "https://egghead.io/courses/learn-es6-ecmascript-2015"},
+		{"title": "ES6 JavaScript - The Basics",
+			"url": "https://www.youtube.com/watch?v=IEf1KAcK6A8"}
+	]},
+			
+	{"subject": "Beginning React", "resources": [
+		{"title": "Thinking in React",
+			"url": "https://facebook.github.io/react/docs/thinking-in-react.html"},
+		{"title": "ReactJS Basics",
+			"url": "https://www.youtube.com/watch?v=JPT3bFIwJYA&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS"},
+		{"title": "REACT JS TUTORIAL #2 - Reactjs Components & Rendering",
+			"url": "https://youtu.be/fd2Cayhez58"},
+		{"title": "ReactJS Basics - #1 What is React?",
+			"url": "https://www.youtube.com/watch?v=JPT3bFIwJYA"},
+		{"title": "REACT JS TUTORIAL #2 - Reactjs Components & Rendering",
+			"url": "https://www.youtube.com/watch?v=fd2Cayhez58"}
+	]},
+		
+	{"subject": "React Events", "resources": [
+		{"title": "Handling Events",
+			"url": "https://facebook.github.io/react/docs/handling-events.html"},
+		{"title": "React Stateless Functional Components: Nine Wins You Might Have Overlooked",
+			"url": "https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc#.jy6q7a2eq"},
+		{"title": "ReactJS Basics - #7 Events & ReactJS",
+			"url": "https://www.youtube.com/watch?v=OcM__8q6p4c&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS&index=8"},
+		{"title": "ReactJS Basics - #8 State of Components",
+			"url": "https://www.youtube.com/watch?v=e5n9j9n83OM&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS&index=9"},
+		{"title": "ReactJS Basics - #9 How does ReactJS update the DOM",
+			"url": "https://www.youtube.com/watch?v=Iw2BLUjQo1E&index=10&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS"},
+		{"title": "ReactJS Basics - #10 Stateless Components",
+			"url": "https://www.youtube.com/watch?v=SEkfzqIgvTo&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS&index=11"},
+		{"title": "Understanding JavaScript’s Function.prototype.bind",
+			"url": "https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/"},
+		{"title": "REACT JS TUTORIAL #5 - Javascript Events & Data Changes in React",
+			"url": "https://www.youtube.com/watch?v=_D1JGNidMr4&feature=youtu.be"}
+	]}
+]
