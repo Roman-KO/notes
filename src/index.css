@@ -60,4 +60,18 @@ button:hover {
     background: #202329;
     color: white;
 }
+hr {
+    heigth: 0px;
+    border: 0;
+    border-top: 4px solid #202329;
+    margin: 5px 0;
+}
+.new-form input {
+    margin-bottom: 10px;
+    display: block;
+    width: 250px;
+}
+.new-form button {
+    margin-top: 10px;
+}
 
