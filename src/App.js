@@ -8,6 +8,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         
+        this.handleEventClick = this.handleEventClick.bind(this);
+        
         // console.log(Json);
         this.state = {
             resources: resources
@@ -38,6 +40,9 @@ class App extends Component {
         
     }
     
+    handleEventClick() {
+        alert("Nope");
+    }
     render() {
         return (
             <div>
@@ -49,6 +54,8 @@ class App extends Component {
                         )
                     }
                 )}
+                <br />
+                <button onClick={this.handleEventClick}>Hello</button>
             </div>
         );
     }
