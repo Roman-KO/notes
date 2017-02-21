@@ -16,6 +16,8 @@
 1. Make two input fields (one for title, one for url) controlled by a single dynamic handler
 1. Make inputs add a new resource to page
 1. Render a button in App that returns something via event handler
+1. Add a new subject with a title and an empty array of resources via button.
+1. Refactor "add new subject" functionality into a separate component.
 
 <!-- 1. Store Links in a ... flat.json (and store in github?) -->
 
