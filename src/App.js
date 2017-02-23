@@ -11,13 +11,12 @@ class App extends Component {
         // console.log(Json);
         
         this.state = {
+            subject: '',
             resources: resources,
         }
         
-        //this.handleEventClick = this.addNewSubject.bind(this);
         this.addNewResource = this.addNewResource.bind(this);
         this.addNewSubject = this.addNewSubject.bind(this);
-        //this.handleTypingNew = this.handleTypingNew.bind(this);
     }
     
     addNewResource(subject, x){
@@ -37,22 +36,15 @@ class App extends Component {
         // });
     }
     addNewSubject(subject, x) {
-        console.log('parent', subject);
-	//	e.preventDefault();
-		
 		const tempState = this.state;
 		const newSubject = {
-			subject: this.state.subject,
+			subject: subject,
 			resources: []
 		}
-				
 		tempState.resources.push(newSubject);
 		this.setState(tempState);
-		
-		console.log(tempState);
-		// console.log(newSubject);
 	}
-    
+
     render() {
         return (
             <div>
