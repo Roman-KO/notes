@@ -22,7 +22,7 @@ class App extends Component {
         tempState.resources[subject].resources.push(x);
         this.setState(tempState);
     }
-    addNewSubject(subject, x) {
+    addNewSubject(subject) {
 		const tempState = this.state;
 		const newSubject = {
 			subject: subject,
