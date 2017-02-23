@@ -7,9 +7,7 @@ import resources from './resources.json';
 class App extends Component {
     constructor(props) {
         super(props);
-        
-        // console.log(Json);
-        
+                
         this.state = {
             subject: '',
             resources: resources,
@@ -23,17 +21,6 @@ class App extends Component {
         let tempState = this.state;
         tempState.resources[subject].resources.push(x);
         this.setState(tempState);
-        
-        // fetch('../resources.json', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //         tempState
-        //     })
-        // });
     }
     addNewSubject(subject, x) {
 		const tempState = this.state;
@@ -50,7 +37,6 @@ class App extends Component {
             <div>
                 {this.state.resources.map(
                     (x, index) => {
-                        // console.log(x);
                         return(
                             <Subject index={index} addResource={this.addNewResource} items={x} key={index} />
                         )

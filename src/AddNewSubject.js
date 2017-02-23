@@ -12,10 +12,6 @@ export default class AddNewSubject extends Component {
 	}
 
 	handleTypingNew(e) {
-		const target = e.target;
-		const value = target.value;
-		const name = target.name;
-		
 		this.setState({
 			[e.target.name]: e.target.value
 		})
@@ -23,19 +19,25 @@ export default class AddNewSubject extends Component {
 	
 	handleSubmit(e){
 		e.preventDefault();
-		this.props.addSubject(this.state.subject);
+		if (this.state.subject === '') {
+			alert('Please enter a subject.');
+		} else {
+			this.props.addSubject(this.state.subject);
+			// reset subject after submit
+			this.setState({subject: ''});
+		}
 	}
 	
 	render() {
 		return (
 			<form className="new-form">
-				<label htmlFor="subject"></label>
+				<label htmlFor="subject">Add New Subject</label>
 				<input
 					name="subject"
 					onChange={this.handleTypingNew}
 					value={this.state.subject}
 					type="text"
-					placeholder="Subject"
+					placeholder="subject"
 				/>
 				<button onClick={this.handleSubmit}>
 					Submit
