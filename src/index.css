@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 20px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 28px;
   font-family: hack, monospace;
   background: #101319;
@@ -12,7 +12,7 @@ a {
     color: #606369;
     text-decoration: none;
     box-shadow: 0 2px 0 0 rgba(255,255,255,0);
-    transition: ease box-shadow 2s, ease color 2s;
+    transition: ease box-shadow .3s, ease color .3s;
 }
 a:hover, a:focus {
     color: white;
@@ -55,10 +55,12 @@ button {
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 2px;
+    cursor: pointer;
 }
 button:hover {
     background: #202329;
     color: white;
+    transition: ease all .2s;
 }
 hr {
     heigth: 0px;
@@ -74,4 +76,22 @@ hr {
 .new-form button {
     margin-top: 10px;
 }
-
+.delete {
+    margin-left: 15px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    color:red;
+    font-family: monospace;
+    font-size: 11px;
+    box-shadow: 0 0 0 0 rgba(255,0,0,.5);
+    outline: none;
+}
+.delete:hover, .delete:active, .delete:focus {
+    box-shadow: 0 0 0 25px rgba(255,0,0,.0);
+    transition: ease all .3s;
+}

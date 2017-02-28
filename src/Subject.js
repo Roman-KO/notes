@@ -5,6 +5,7 @@ export default class SubjectToo extends Component {
 		super(props);
 		
 		this.handleClick = this.handleClick.bind(this);
+		this.handleDelete = this.handleDelete.bind(this);
 		this.handleTyping = this.handleTyping.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		
@@ -29,6 +30,25 @@ export default class SubjectToo extends Component {
 				isClicked: false,
 				styleDiv: 'unfuntoo'})
 		}, 2000)
+	}
+	
+	handleDelete(x, i) {
+		// const tempProps = this.props.items;
+		let fun = () => {
+			// console.log(x.x.title);
+			// console.log(this.props.items.resources[0].title);
+			
+			if(this.props.items.resources[i] === x.x.index){
+				let yep = x.x.title;
+				console.log(yep);
+				
+				// delete this.props.items.resources[i];
+				// console.log(this.props.items.resources[i].title);
+			} else {
+				console.log("bananas: " + this.props.items.resources);
+			}
+		}
+		fun();
 	}
 	
 	handleTyping(e) {
@@ -64,11 +84,18 @@ export default class SubjectToo extends Component {
 						return(
 							<li key={i}>
 								<a href="{x.url}"
-								target="_blank"
-								className={this.state.styleDiv}
+									target="_blank"
+									className={this.state.styleDiv}
 								>
 									{x.title}
 								</a>
+									<button
+										className="delete"
+										onClick={() => {
+											this.handleDelete({x}, {i})}
+										}>
+										x
+									</button>
 							</li>
 						)
 					}

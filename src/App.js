@@ -18,10 +18,13 @@ class App extends Component {
     }
     
     addNewResource(subject, x){
+        console.log(x);
+        console.log(subject);
         let tempState = this.state;
         tempState.resources[subject].resources.push(x);
         this.setState(tempState);
     }
+    
     addNewSubject(subject) {
 		const tempState = this.state;
 		const newSubject = {
