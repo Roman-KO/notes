@@ -68,6 +68,9 @@ hr {
     border-top: 4px solid #202329;
     margin: 5px 0;
 }
+form {
+    padding: 30px 0 15px;
+}
 .new-form input {
     margin-bottom: 10px;
     display: block;

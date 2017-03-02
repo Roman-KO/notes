@@ -18,6 +18,7 @@
 1. Render a button in App that returns something via event handler
 1. Add a new subject with a title and an empty array of resources via button.
 1. Refactor "add new subject" functionality into a separate component.
+1. Delete a resource
 
 <!-- 1. Store Links in a ... flat.json (and store in github?) -->
 

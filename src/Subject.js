@@ -4,8 +4,8 @@ export default class SubjectToo extends Component {
 	constructor(props) {
 		super(props);
 		
-		this.handleClick = this.handleClick.bind(this);
-		this.handleDelete = this.handleDelete.bind(this);
+		this.handleDeleteResource = this.handleDeleteResource.bind(this);
+		this.handleDeleteSubject = this.handleDeleteSubject.bind(this);
 		this.handleTyping = this.handleTyping.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		
@@ -17,38 +17,14 @@ export default class SubjectToo extends Component {
 		}
 	}
 	
-	handleClick() {
-		this.setState(prevState => ({
-			isClicked: !prevState.isClicked,
-			styleDiv: 'fun'
-		}));
-		console.log(this.state.isClicked);
+	handleDeleteResource(x) {
+		const subject = this.props.index;
+		const resource = x;
 		
-		setTimeout(() => {
-			console.log(this.state.isClicked);
-			this.setState({
-				isClicked: false,
-				styleDiv: 'unfuntoo'})
-		}, 2000)
+		this.props.removeResource(subject, resource);
 	}
-	
-	handleDelete(x, i) {
-		// const tempProps = this.props.items;
-		let fun = () => {
-			// console.log(x.x.title);
-			// console.log(this.props.items.resources[0].title);
-			
-			if(this.props.items.resources[i] === x.x.index){
-				let yep = x.x.title;
-				console.log(yep);
-				
-				// delete this.props.items.resources[i];
-				// console.log(this.props.items.resources[i].title);
-			} else {
-				console.log("bananas: " + this.props.items.resources);
-			}
-		}
-		fun();
+	handleDeleteSubject(x) {
+		this.props.removeSubject(x);
 	}
 	
 	handleTyping(e) {
@@ -57,8 +33,6 @@ export default class SubjectToo extends Component {
 		const name = target.name;
 		
 		this.setState({
-			// title: e.target.value,
-			// url: e.target.value,
 			[name]: value
 		})
 	}
@@ -75,8 +49,16 @@ export default class SubjectToo extends Component {
 	render() {
 		return(
 			<div>
-				<h2 onClick={this.handleClick}>
+				<h2>
 					{this.props.items.subject}
+					<button
+						className="delete"
+						onClick={() => {
+								this.handleDeleteSubject(this.props.index)
+							}
+						}>
+						x
+					</button>
 				</h2>
 				<ul>
 				{this.props.items.resources.map(
@@ -89,13 +71,14 @@ export default class SubjectToo extends Component {
 								>
 									{x.title}
 								</a>
-									<button
-										className="delete"
-										onClick={() => {
-											this.handleDelete({x}, {i})}
-										}>
-										x
-									</button>
+								<button
+									className="delete"
+									onClick={() => {
+											this.handleDeleteResource({i})
+										}
+									}>
+									x
+								</button>
 							</li>
 						)
 					}
@@ -107,17 +90,20 @@ export default class SubjectToo extends Component {
 						onChange={this.handleTyping}
 						value={this.state.url}
 						type="text"
+						placeholder="URL"
 					/>
 					<input
 						name="title"
 						onChange={this.handleTyping}
 						value={this.state.title}
 						type="text"
+						placeholder="Title"
 					/>
 					<button onClick={this.handleSubmit}>
 						Submit
 					</button>
 				</form>
+				<hr />
 			</div>
 		)
 	}

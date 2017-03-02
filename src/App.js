@@ -15,6 +15,8 @@ class App extends Component {
         
         this.addNewResource = this.addNewResource.bind(this);
         this.addNewSubject = this.addNewSubject.bind(this);
+        this.removeResource = this.removeResource.bind(this);
+        this.removeSubject = this.removeSubject.bind(this);
     }
     
     addNewResource(subject, x){
@@ -34,6 +36,16 @@ class App extends Component {
 		tempState.resources.push(newSubject);
 		this.setState(tempState);
 	}
+    
+    removeSubject(subject) {
+        delete this.state.resources[subject];
+		this.setState(this.state);
+	}
+    
+    removeResource(subject, resource) {
+        delete this.state.resources[subject].resources[resource.i];
+        this.setState(this.state);
+    }
 
     render() {
         return (
@@ -41,12 +53,17 @@ class App extends Component {
                 {this.state.resources.map(
                     (x, index) => {
                         return(
-                            <Subject index={index} addResource={this.addNewResource} items={x} key={index} />
+                            <Subject
+                                index={index}
+                                addResource={this.addNewResource}
+                                removeResource={this.removeResource}
+                                removeSubject={this.removeSubject}
+                                items={x}
+                                key={index}
+                            />
                         )
                     }
                 )}
-                <br />
-                <hr />
                 <br />
                 <AddNewSubject addSubject={this.addNewSubject}/>
             </div>
