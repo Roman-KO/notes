@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Subject from './Subject';
-import AddNewSubject from './AddNewSubject';
+import Note from './Note';
+import NewNote from './NewNote';
 import resources from './resources.json';
 
 class App extends Component {
@@ -9,41 +9,39 @@ class App extends Component {
         super(props);
                 
         this.state = {
-            subject: '',
+            note: '',
             resources: resources,
         }
         
-        this.addNewResource = this.addNewResource.bind(this);
-        this.addNewSubject = this.addNewSubject.bind(this);
-        this.removeResource = this.removeResource.bind(this);
-        this.removeSubject = this.removeSubject.bind(this);
+        this.addnewItem = this.addnewItem.bind(this);
+        this.addNewnote = this.addNewnote.bind(this);
+        this.removeItem = this.removeItem.bind(this);
+        this.removeNote = this.removeNote.bind(this);
     }
     
-    addNewResource(subject, x){
-        console.log(x);
-        console.log(subject);
+    addnewItem(note, x){
         let tempState = this.state;
-        tempState.resources[subject].resources.push(x);
+        tempState.resources[note].resources.push(x);
         this.setState(tempState);
     }
     
-    addNewSubject(subject) {
+    addNewnote(note) {
 		const tempState = this.state;
-		const newSubject = {
-			subject: subject,
+		const newnote = {
+			note: note,
 			resources: []
 		}
-		tempState.resources.push(newSubject);
+		tempState.resources.push(newnote);
 		this.setState(tempState);
 	}
     
-    removeSubject(subject) {
-        delete this.state.resources[subject];
+    removeNote(note) {
+        delete this.state.resources[note];
 		this.setState(this.state);
 	}
     
-    removeResource(subject, resource) {
-        delete this.state.resources[subject].resources[resource.i];
+    removeItem(note, resource) {
+        delete this.state.resources[note].resources[resource.i];
         this.setState(this.state);
     }
 
@@ -53,11 +51,11 @@ class App extends Component {
                 {this.state.resources.map(
                     (x, index) => {
                         return(
-                            <Subject
+                            <Note
                                 index={index}
-                                addResource={this.addNewResource}
-                                removeResource={this.removeResource}
-                                removeSubject={this.removeSubject}
+                                addItem={this.addnewItem}
+                                removeItem={this.removeItem}
+                                removeNote={this.removeNote}
                                 items={x}
                                 key={index}
                             />
@@ -65,7 +63,7 @@ class App extends Component {
                     }
                 )}
                 <br />
-                <AddNewSubject addSubject={this.addNewSubject}/>
+                <NewNote addnote={this.addNewnote}/>
             </div>
         );
     }
