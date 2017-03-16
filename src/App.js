@@ -19,32 +19,31 @@ class App extends Component {
         this.removeNote = this.removeNote.bind(this);
     }
     
-    addnewItem(note, x){
-        let tempState = this.state;
-        tempState.resources[note].resources.push(x);
-        this.setState(tempState);
-    }
-    
     addNewnote(note) {
-		const tempState = this.state;
-		const newnote = {
-			note: note,
-			resources: []
-		}
-		tempState.resources.push(newnote);
-		this.setState(tempState);
-	}
-    
+        const tempState = this.state;
+        const newNote = {
+            note: note,
+            resources: []
+        }
+        tempState.resources.push(newNote);
+        this.setState(tempState);
+        console.log(newNote);
+    }
     removeNote(note) {
         delete this.state.resources[note];
 		this.setState(this.state);
 	}
     
+    addnewItem(note, x){
+        let tempState = this.state;
+        tempState.resources[note].resources.push(x);
+        this.setState(tempState);
+    }
     removeItem(note, resource) {
         delete this.state.resources[note].resources[resource.i];
         this.setState(this.state);
     }
-
+    
     render() {
         return (
             <div>

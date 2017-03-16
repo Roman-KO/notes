@@ -54,14 +54,11 @@ export default class Note extends Component {
 			<div className="note">
 				<h2>
 					{this.props.items.note}
-					<button
-						className="delete"
+						<i className="delete material-icons"
 						onClick={() => {
 								this.handleDeleteNote(this.props.index)
 							}
-						}>
-						x
-					</button>
+						}>clear</i>
 				</h2>
 				<ul>
 				{this.props.items.resources.map(
@@ -69,14 +66,11 @@ export default class Note extends Component {
 						return(
 							<li key={i}>
 								{x.item}
-								<button
-									className="delete-item"
-									onClick={() => {
-											this.handleDeleteItem({i})
-										}
-									}>
-									x
-								</button>
+								<i className="delete-item material-icons"
+								onClick={() => {
+										this.handleDeleteItem({i})
+									}
+								}>clear</i>
 							</li>
 						)
 					}
